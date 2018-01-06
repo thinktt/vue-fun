@@ -1,0 +1,30 @@
+<!DOCTYPE html><html>
+
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/http-vue-loader"></script>
+  <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+</head>
+
+<body>
+
+
+  
+<div id="app">
+  <transition 
+    appear 
+    enter-active-class="animated bounceInDown" 
+    leave-active-class="animated bounceOut"
+    mode="out-in">
+      <h1 v-if="greetingIsOn" key="greeting1">{{ greeting }}</h1>
+      <h1 v-else key="greeting2">What's up!</h1>
+  </transition>
+  <button @click="toggleGreeting">Toggle</button>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
